@@ -1,9 +1,7 @@
 <template>
-    <section>
-        <div class="container title-container">
-            <h1 class="lead">My first Vue.js Project</h1>
-        </div>
-    </section>
+    <div class="container title-container">
+        <h1>Personal Widget</h1>
+    </div>
 </template>
 
 <script>
@@ -13,8 +11,5 @@
 </script>
 
 <style scoped>
-    section {
-        width: 100vw;
-        height: 100vh;
-    }
+
 </style>
