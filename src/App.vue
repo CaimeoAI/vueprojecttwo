@@ -1,30 +1,70 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <NavBar/>
   <router-view/>
 </template>
 
+<script>
+  import NavBar from './components/Navbar.vue'
+
+  export default {
+    name: 'App',
+    components: {
+      NavBar
+    }
+  }
+
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+  }
 
-nav {
-  padding: 30px;
-}
+  body {
+    background-color: #404040;
+  }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  .title-container {
+    width: 100%;
+  }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+  h1 {
+    color: white;
+    padding-top: 2rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+    
+  .navbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 2rem;
+    height: 100vh;
+    background-color: #E4E6EB;
+  }
+
+  ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  li {
+    margin: 1rem 0;
+    list-style-type: none;
+  }
+
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+
 </style>
